@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+
+
+{% block body %}
+
+<table>
+	<thead>
+		<tr>
+			<th>SALARIE</th>
+			<th>ADRESSE</th>
+			<th>CP</th>
+			<th>VILLE</th>
+			<th>DATE EMBAUCHE</th>
+			<th>ENTREPRISE</th>
+		</tr>
+		
+	</thead>
+	<tbody>
+		
+		<tr>
+			<td>{{ salarie.nom ~ ' ' ~ salarie.prenom }}</td>
+			<td>{{ salarie.adresse }}</td>
+			<td>{{ salarie.cp }}</td>
+			<td>{{ salarie.ville }}</td>
+			<td>{{ salarie.dateEmbauche | date('d/m/Y') }}</td>
+			<td>{{ salarie.entreprise.raisonSociale }}</td>
+		</tr>
+		
+	</tbody>
+</table>
+
+{% endblock %}
